@@ -108,3 +108,23 @@ At the end of each substantial task:
 3. update `PRJ_IRSIM_001_STATE.md` in this repository with a concise snapshot;
 4. update the mainline only when the project direction or acceptance philosophy changes;
 5. stop at the authorized milestone and do not auto-expand scope.
+
+
+## 中文命名规则
+
+从现在起，所有面向用户的新阶段、新任务、新验收报告和新建 Markdown 文件，统一使用中文名称。
+
+内部追踪编号（如 `P2-001`、`M4`、`G2`、`G4`）继续保留，但仅用于：
+- 元数据；
+- 状态追踪；
+- 验收映射；
+- 括号内辅助说明。
+
+不得再把英文缩写或内部编号作为主要阶段名、任务标题或新建文件名。
+
+推荐格式：
+- 阶段名：`真实设备与真实数据合同审计阶段`
+- 任务文件：`tasks/真实设备与真实数据合同审计.md`
+- 内部元数据：`task_id: P2-001`
+
+历史文件不强制批量重命名，以免破坏引用；从本规则生效后的新任务开始执行中文命名。
