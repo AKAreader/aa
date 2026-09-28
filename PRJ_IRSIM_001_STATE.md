@@ -27,6 +27,11 @@ governance_status: **ACTIVE**
 
 ## 2. P1-001 / P1-001-R1 状态
 
+formal_acceptance: **ACCEPTED_WITH_LIMITATIONS**  
+acceptance_scope: **M4 受限单机诊断验收；未进入 G2/G4；未启动 M5**  
+acceptance_basis: **R4 强哈希匹配、631/631 清单一致、G1/R4 回归通过、12/12 RGB/IR 同步与标签核验通过**
+
+
 总体：
 
 `PASS_WITH_LIMITATIONS`
