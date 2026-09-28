@@ -221,6 +221,9 @@ Avata 2 已进入原数值 IR 主链。
 
 ## 9. 当前唯一优先主任务
 
+next_task_id: **P2-001**  
+next_task_file: **tasks/P2-001_G2_G4_INPUT_AUDIT.md**  
+
 在启动 M5 批量场景与数据扩量之前，优先取得并核验：
 
 1. 真实热像设备参数；
