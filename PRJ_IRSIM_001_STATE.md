@@ -1,252 +1,80 @@
-# PRJ-IRSIM-001｜当前状态快照
+# 当前状态快照
 
-snapshot_date: **2026-09-28**  
-mainline_version: **1.1**  
-local_project_state_revision: **55**  
-governance_status: **ACTIVE**
+project_id: PRJ-IRSIM-001
+mainline_version: 1.2
+governance_update_date: 2026-09-29
+last_reported_execution_snapshot_date: 2026-09-28
+last_reported_local_revision: 55
+execution_evidence: USER_REPORTED_AND_PREVIOUS_GOVERNANCE_SNAPSHOT；本轮未访问 Windows 或独立复跑。
 
----
+## 一、执行目录与身份
 
-## 1. 关键路径
+数值工程：D:\AgentOS\Projects\2026-09-26-多尺度热红外仿真数据研究
+资产库：D:\Research\UAV_ASSET_LIBRARY
+相关独立试点：D:\AgentOS\Projects\PRJ-COLLABPILOT-001；关系 other，不是原数值工程。
 
-### 数值 IR 项目根目录
+原状态文件保持执行真源。本次治理文档更新不表示本地 revision 已增加。
 
-`D:\AgentOS\Projects\2026-09-26-多尺度热红外仿真数据研究`
+## 二、保留的阶段状态
 
-### UAV 资产库
+P1-001-R1：此前治理签收为 ACCEPTED_WITH_LIMITATIONS，范围仅 M4 受限单机诊断；UNCALIBRATED。签收依据来自用户提交的执行汇报，不能说本轮已独立重验。
 
-`D:\Research\UAV_ASSET_LIBRARY`
+R4 目录：数值工程/lanes/worker-physics/workspace/r4_scene_pilot。
+报告的 manifest 文件 SHA256：77925FC3EF95178C8B0CF780B90EF6F4F40088B84F5C0E17FD57B17220D7EDD6。
+报告的清单：631/631 一致；G1 14/14、R4 9/9、帧结构 30/30 通过。G1 唯一现值差异为签收后追加工作日志，其余 27 项一致。旧 R4 九个 rejected 不改判。
 
-### 相关但独立的协作试点
+Avata 2：已有生产母版/运行副本、四旋翼轴、状态缓存、热网络和原链接入；当前 IR 仍使用均匀 body_shell 表面温度。旋向、RPM/负载、热物性、相机响应均未实测。
 
-`D:\AgentOS\Projects\PRJ-COLLABPILOT-001`
+Air 3S：GEOMETRY_PARTIAL；机身前部、传感器和双摄可编辑；完整机臂、电机位置、桨/轴距缺证据，不补猜。
 
-关系：`other`。不得再把它作为目标数值 IR 工程。
+资产盘点快照：13 份源文件、11 款 DJI、7 份比例待核原始导入。非 DJI 旁路资料任务沿统一规范；数量需本地后续实查，不硬编码为验收指标。
 
----
+已报告配对：12 组、10 positive/1 negative/1 ignore、12/12 同步标签通过；分辨率 64×64。它们证明既有受限接口联通，不证明实机匹配、分部件热场、全分辨率或数据集无泄漏。
 
-## 2. P1-001 / P1-001-R1 状态
+## 三、本轮新增的是设计与参数证据，不是仿真结果
 
-formal_acceptance: **ACCEPTED_WITH_LIMITATIONS**  
-acceptance_scope: **M4 受限单机诊断验收；未进入 G2/G4；未启动 M5**  
-acceptance_basis: **R4 强哈希匹配、631/631 清单一致、G1/R4 回归通过、12/12 RGB/IR 同步与标签核验通过**
+外部交接稿已逐节吸收；原技术方案相关章节已核对。详细设备参数和原文保留本地/用户会话，不进入公开仓库。
 
+CAM01 作为来源化研究配置使用；方案拟选参数不确认交付实机，也不把旧视频绑定到该配置。原文冲突、未知 RAW/AGC/NUC/RSR/时序和具体设备身份继续保留。
 
-总体：
+主线 1.2 正式分开参数化仿真研发与具体设备标定；不以未取得全部实测资料为所有工程建设的阻塞，也不降低 G2/G4。
 
-`PASS_WITH_LIMITATIONS`
+每次派工前审核已写入 AGENTS.md 和发布规则；本轮为单助手四视角桌面设计审查，不是四名独立执行者验收。
 
-M4：
+## 四、当前执行队列
 
-`PASS_WITH_LIMITATIONS / UNCALIBRATED`
+next_task_id: P2-002
+next_task_version: 1.0
+next_task_name: 首台相机参数化成像与分部件热场联调
+next_task_file: tasks/首台相机参数化成像与分部件热场联调.md
+review_file: docs/外部交接材料吸收与四方向审核.md
+next_task_status: APPROVED_WITH_GATES / NOT_EXECUTED_IN_THIS_CHAT
 
-本阶段已经停止扩量。
+P2-001《真实设备与真实数据合同审计》保留为并行真实证据工作；尚未收到完成证据，不能宣布完成。其原“唯一优先”调度由当前主线修订，不删除旧任务和历史。
 
----
+本轮下一任务范围：来源化相机配置、分部件表面热映射、旧链版本化适配、原生单帧和最多三十组短序列诊断、审计框架。资源/数值门不过则停止受影响部分。不得启动大规模数据或全机型制作。
 
-## 3. 原基线恢复结果
+## 五、里程碑状态未被治理发布提升
 
-- 当前 `PROJECT_STATE.json` revision：55
-- R4 路径：
-  `D:\AgentOS\Projects\2026-09-26-多尺度热红外仿真数据研究\lanes\worker-physics\workspace\r4_scene_pilot`
-- R4 `manifest.sha256` 文件 SHA-256：
-
-`77925FC3EF95178C8B0CF780B90EF6F4F40088B84F5C0E17FD57B17220D7EDD6`
-
-- `R4_MANIFEST_HASH_MATCH = TRUE`
-- 清单内：631/631 一致
-- `BASELINE_RECOVERED = TRUE`
-- G1 tests：14/14 PASS
-- R4 tests：9/9 PASS
-- R4 frame structure：30/30 PASS
-- G1 清单唯一现值差异：签收后追加工作日志；其余 27 项一致
-- 旧 R4 的 9 个 `rejected` 保持原判
-
----
-
-## 4. 当前生产资产样板
-
-### Avata 2｜样板 A
-
-当前已经具备：
-
-- production master
-- runtime copy
-- 四个独立旋翼轴
-- 运动诊断工程
-- 共同状态缓存
-- 热网络接口
-- 已接入原 R4 几何接口
-- 原数值 IR 模块未替换
-- 热网络同钟 `body_shell` 温度已进入 UAV 材料口
-
-当前限制：
-
-- 旋翼真实旋向未实测/未校准
-- RPM /真实飞控关系未标定
-- 热参数未标定
-- 相机未标定
-- 当前 IR 仍使用均匀机体表面温度映射
-
-运动/热/IR 结论不得高于未标定诊断级。
-
-### Air 3S｜样板 B
-
-当前：
-
-`GEOMETRY_PARTIAL`
-
-已经建立可编辑的：
-
-- 机身前部
-- 传感器结构
-- 双摄结构
-
-当前多角度证据不足以可靠确定：
-
-- 完整电机位置
-- 完整机臂
-- 桨/轴距几何
-
-因此没有补猜，暂不进入 M4 主路径。
-
----
-
-## 5. 当前资产库盘点
-
-最新已核验阶段记录：
-
-- 13 份三维源文件
-- 覆盖 11 款 DJI
-- 7 份比例待核原样导入工程
-- 原始源文件和导入工程哈希未因 P1 改动
-- 非 DJI 五类资料任务为旁路工作，必须继续服从主线与资产标准
-
-这些数量是当前项目快照，不写入永久主线。
-
----
-
-## 6. M4 受限诊断结果
-
-Avata 2 已进入原数值 IR 主链。
-
-本轮产生：
-
-- 12 组 RGB/IR 配对样本
-- 10 positive
-- 1 negative
-- 1 ignore
-- 12/12 同步与标签核验通过
-
-本轮结论仅为：
-
-`UNCALIBRATED_END_TO_END_INTEGRATION`
-
-不代表：
-
-- 真实相机匹配
-- 热物理准确
-- 可直接替代实拍
-- 已通过 G2/G4
-- 已可扩展 M5 大规模生产
-
----
-
-## 7. 仍未通过/未标定
-
-### G0 / 数据合同
-
-仍需确认或完善真实样本的：
-
-- 来源
-- 使用授权
-- 相机/镜头
-- 波段
-- 原始位深
-- NUC/AGC
-- 温度映射
-- 目标标注
-- 采集组
-- 真实独立留出定义
-
-### G2 / 设备标定
-
-仍未完成：
-
-- 真实相机光谱响应
-- 曝光/积分时间
-- 光学/PSF
-- 噪声
-- 黑体/均匀场
-- NUC 相关行为
-- 时序稳定性
-- 可追溯独立标定会话
-
-### 目标热物理
-
-仍未标定：
-
-- 材料发射率
-- 热容
-- 导热
-- 对流
-- 环境边界
-- 分部件实际温度历史
-- 电机/ESC/电池等真实损耗和热传递
-
-### G4 / 真实独立验证
-
-未完成：
-
-- 封存独立实拍组
-- 真实/合成同输出阶段比较
-- 预登记误差
-- 下游检测/识别盲测
-
----
-
-## 8. 当前里程碑状态
-
-| Milestone | Status |
+| 里程碑 | 当前执行证据状态 |
 | --- | --- |
-| M0 事实/治理/接口 | PASS_WITH_LIMITATIONS |
+| M0 事实/治理/接口 | PASS_WITH_LIMITATIONS；新规则待本地接入 |
 | M1 生产资产 | IN_PROGRESS |
-| M2 运动执行 | UNCALIBRATED_DIAGNOSTIC |
-| M3 热状态 | UNCALIBRATED_DIAGNOSTIC |
-| M4 双波段采集 | PASS_WITH_LIMITATIONS / UNCALIBRATED |
-| M5 场景与扩量 | NOT_STARTED |
-| M6 真实验证 | BLOCKED_BY_G2_G4 |
+| M2 运动 | UNCALIBRATED_DIAGNOSTIC |
+| M3 热状态 | UNCALIBRATED_DIAGNOSTIC；分部件成像待做 |
+| M4 双波段 | 既有受限 PASS_WITH_LIMITATIONS；新相机原生诊断未运行 |
+| M5 场景/扩量 | 未启动批量生产 |
+| M6 真实验证 | G2/G4 证据未完成 |
 
----
+## 六、持续未决
 
-## 9. 当前唯一优先主任务
+G0：真实来源、权限、相机实例/镜头、原始输出阶段、采集组及设备关联。
+G2：本机响应、光学、时序、噪声、NUC、可追溯标定与独立会话。
+目标热学：发射率、热容/导热/对流、损耗、环境与分部件表面温度历史。
+G4：独立实拍留出、使用历史、同阶段比较和预登记评估。
 
-next_task_id: **P2-001**  
-next_task_name: **真实设备与真实数据合同审计阶段**  
-next_task_file: **tasks/真实设备与真实数据合同审计.md**  
+真实留出及其使用历史应现在规划，不等仿真全部做完再寻找“从未见过”的数据。只有处理后视频也能作为原始采集保留，但不能反推未提供的高位深 RAW。
 
-在启动 M5 批量场景与数据扩量之前，优先取得并核验：
+## 七、下一次接管
 
-1. 真实热像设备参数；
-2. 独立实拍留出的来源、采集组和授权；
-3. 可用于 G2 的标定资料；
-4. 可用于 G4 的封存真实对照。
-
-这些证据到位后，才决定：
-- 先修正相机链；
-- 先修正热模型；
-- 还是进入更复杂场景扩展。
-
----
-
-## 10. 后续任务前必读
-
-任何新 Codex 任务必须按以下顺序读取：
-
-1. `AGENTS.md`
-2. `PRJ_IRSIM_001_MAINLINE.md`
-3. 本文件
-4. 本地 `PROJECT_STATE.json`
-5. 任务所需的实际报告/资产/代码
-
-不得只依据上一轮聊天摘要继续执行。
+读 AGENTS.md -> 主线 -> 本状态 -> 发布规则 -> 当前任务和审核 -> 本地执行状态及证据。核对治理 commit 与任务版本再执行；实质变更必须复审。
